@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="SD卡根目录文件夹名称" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入SD卡根目录下安装包文件夹名称"
+            android:text="packages" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="androidManifest中渠道号的meta-data的name" />
+
+        <EditText
+            android:id="@+id/et_channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入androidManifest中渠道号的meta-data中的name"
+            android:text="channel" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll2"
+        android:layout_marginRight="10dp"
+        android:text="获取渠道信息" />
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/bt"
+        >
+	    <TextView
+	        android:id="@+id/tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:hint="这里将展示获取到的渠道信息"
+	        android:textIsSelectable="true"
+			/>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 北京兰贝科技有限公司版权所有 -->
+<project>
+	<dependencies>
+		<dependency>
+			<groupId>com.marsor.android.common</groupId>
+			<artifactId>MarsorUtils</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>MarsorRepository</id>
+			<name>Marsor Maven Mirror</name>
+			<url>http://maven.marsorstudio.cn:8088/</url>
+		</repository>
+	</repositories>
+	<package>  
+        <channels keyname="channelId">  
+            <channel value="baidu" />  
+            <channel value="wandoujia" />  
+            <channel value="91zhushou" />  
+            <channel value="googleplay" />  
+            <channel value="360zhushou" />  
+        </channels>  
+        <keystore path="D:\android.keystore" passwd="123456">  
+            <alias name="android.keystore" passwd="123456" />  
+        </keystore>  
+        <outpath value="D:\Repos\output\" />  
+    </package> 
